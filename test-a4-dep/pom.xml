@@ -3,16 +3,29 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.atha</groupId>
-  <artifactId>test-a4</artifactId>
+  <artifactId>test-a4-dep</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>test-a4</name>
-  <url>http://maven.apache.org</url>
+  <scm>
+    <connection>scm:git:git://github.com/thatha/test-a4.git</connection>
+    <url>scm:git:git://github.com/thatha/test-a4.git</url>
+    <developerConnection>scm:git:git@github.com:thatha/test-a4.git</developerConnection>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <bias>http://bias.atha.io:8081/artifactory/ext-snapshot-local</bias>
   </properties>
+
+  <distributionManagement>
+    <repository>
+     <id>bias</id>
+     <name>libs-releases-local</name>
+     <url>${bias}</url>
+     <uniqueVersion>false</uniqueVersion>
+    </repository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
